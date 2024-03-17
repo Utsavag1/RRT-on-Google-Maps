@@ -57,9 +57,7 @@ def is_collision_free(from_point,to_point):
 
 def rrt(img):
     nodes=[tuple(source)]
-    i=0
-    while True:
-        i=i+1
+    for i in range(10000):
         rand_point=sampling((i/67))
         nearest_node=nearest_neighbor(nodes,rand_point)
         point=steer(nearest_node,rand_point)
